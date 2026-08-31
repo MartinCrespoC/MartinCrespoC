@@ -36,5 +36,6 @@ jobs:
           git add assets/generated/
           if ! git diff --cached --quiet; then
             git commit -m "chore: refresh profile metrics"
+            git pull --rebase origin main
             git push
           fi

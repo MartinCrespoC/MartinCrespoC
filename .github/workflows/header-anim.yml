@@ -44,5 +44,6 @@ jobs:
           git add assets/header.webp
           if ! git diff --cached --quiet; then
             git commit -m "chore: re-render animated particle header"
+            git pull --rebase origin main
             git push
           fi
