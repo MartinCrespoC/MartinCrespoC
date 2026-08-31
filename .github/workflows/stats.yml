@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths:
       - scripts/generate-stats.js
+      - profile.config.json
 
 permissions:
   contents: write

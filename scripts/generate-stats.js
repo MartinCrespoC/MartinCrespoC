@@ -60,6 +60,17 @@ const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replac
 const fmtNum = (n) => (n >= 1000 ? (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k' : String(n));
 const truncate = (s, n) => (s.length > n ? s.slice(0, n - 1).trimEnd() + '…' : s);
 
+function wrapText(s, width) {
+  const lines = [''];
+  for (const word of s.split(/\s+/)) {
+    const cur = lines[lines.length - 1];
+    const next = cur ? `${cur} ${word}` : word;
+    if (next.length > width && cur) lines.push(word);
+    else lines[lines.length - 1] = next;
+  }
+  return lines;
+}
+
 async function api(endpoint) {
   const res = await fetch(`https://api.github.com${endpoint}`, {
     headers: {
@@ -97,10 +108,27 @@ async function collectData() {
     })
   );
 
-  const featured = [...repos]
-    .sort((a, b) => Number(a.fork) - Number(b.fork) || b.stargazers_count - a.stargazers_count)
-    .filter((r) => r.name.toLowerCase() !== USER.toLowerCase())
-    .slice(0, 3);
+  /* Featured repos: explicit list from profile.config.json wins; otherwise auto-pick */
+  let featured;
+  const configPath = path.join(__dirname, '..', 'profile.config.json');
+  const config = fs.existsSync(configPath) ? JSON.parse(fs.readFileSync(configPath, 'utf8')) : {};
+  if (Array.isArray(config.featuredRepos) && config.featuredRepos.length) {
+    featured = (await Promise.all(
+      config.featuredRepos.slice(0, 3).map(async (name) => {
+        try {
+          return await api(`/repos/${USER}/${name}`);
+        } catch {
+          console.error(`featured repo not found: ${name} (skipped)`);
+          return null;
+        }
+      })
+    )).filter(Boolean);
+  } else {
+    featured = [...repos]
+      .sort((a, b) => Number(a.fork) - Number(b.fork) || b.stargazers_count - a.stargazers_count)
+      .filter((r) => r.name.toLowerCase() !== USER.toLowerCase())
+      .slice(0, 3);
+  }
 
   return {
     user,
@@ -250,15 +278,18 @@ function renderRepos(d, C, langColors) {
     const x = X0 + i * (CW + GAP);
     const accent = [C.cyan, C.violet, C.magenta][i % 3];
     const langColor = langColors[r.language] || C.dim;
-    const desc = truncate(r.description || 'No description provided.', 96);
+    const descLines = wrapText(r.description || 'No description provided.', 48);
+    const descOverflow = descLines.length > 2;
+    const desc1 = descLines[0] || '';
+    const desc2 = descOverflow ? descLines[1] + ' …' : (descLines[1] || '');
     const name = truncate(r.name, 30);
     parts.push(`  <g>
     <rect x="${x}" y="${Y0}" width="${CW}" height="${CH}" rx="10" fill="${C.glass}" fill-opacity="${C.glassOpacity}" stroke="${accent}" stroke-opacity="0.3"/>
     ${brackets(x, Y0, CW, CH, C)}
     <text x="${x + 16}" y="${Y0 + 34}" font-family="${SANS}" font-weight="700" font-size="16.5" fill="${accent}">${esc(name)}</text>
     ${r.fork ? `<text x="${x + CW - 16}" y="${Y0 + 32}" text-anchor="end" font-family="${MONO}" font-size="9.5" letter-spacing="2" fill="${C.dim}">FORK</text>` : ''}
-    <text x="${x + 16}" y="${Y0 + 62}" font-family="${SANS}" font-size="12.5" fill="${C.muted}">${esc(desc.slice(0, 48))}</text>
-    <text x="${x + 16}" y="${Y0 + 82}" font-family="${SANS}" font-size="12.5" fill="${C.muted}">${esc(desc.length > 48 ? desc.slice(48) : '')}</text>
+    <text x="${x + 16}" y="${Y0 + 62}" font-family="${SANS}" font-size="12.5" fill="${C.muted}">${esc(desc1)}</text>
+    <text x="${x + 16}" y="${Y0 + 82}" font-family="${SANS}" font-size="12.5" fill="${C.muted}">${esc(desc2)}</text>
     <circle cx="${x + 21}" cy="${Y0 + CH - 24}" r="5" fill="${langColor}" filter="url(#glow)"/>
     <text x="${x + 34}" y="${Y0 + CH - 20}" font-family="${SANS}" font-size="12.5" fill="${C.text}">${esc(r.language || 'N/A')}</text>
     <path d="M ${x + 190} ${Y0 + CH - 30} L ${x + 191.8} ${Y0 + CH - 25.8} L ${x + 196} ${Y0 + CH - 25.2} L ${x + 192.7} ${Y0 + CH - 22.1} L ${x + 193.6} ${Y0 + CH - 18} L ${x + 190} ${Y0 + CH - 20.6} L ${x + 186.4} ${Y0 + CH - 18} L ${x + 187.3} ${Y0 + CH - 22.1} L ${x + 184} ${Y0 + CH - 25.2} L ${x + 188.2} ${Y0 + CH - 25.8} Z" fill="${accent}" opacity="0.9"/>
