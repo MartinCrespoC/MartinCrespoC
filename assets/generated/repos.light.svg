@@ -1,0 +1,74 @@
+<svg width="1200" height="210" viewBox="0 0 1200 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Featured repositories">
+
+  <defs>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="2.4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="num-glow" x="-40%" y="-80%" width="180%" height="260%">
+      <feGaussianBlur stdDeviation="3.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="210" rx="12" fill="#F5F7FE"/>
+  <g>
+    <rect x="15" y="22" width="380" height="166" rx="10" fill="#E9EDFB" fill-opacity="0.9" stroke="#00A8C8" stroke-opacity="0.3"/>
+    
+    <g stroke="#00A8C8" stroke-width="1.6" opacity="0.85" fill="none">
+      <path d="M 15 34 V 22 H 27"/>
+      <path d="M 395 176 V 188 H 383"/>
+    </g>
+    <text x="31" y="56" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="16.5" fill="#00A8C8">QuantumLeap---Llama.cpp-Turbo…</text>
+    
+    <text x="31" y="84" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#4A5578">🚀 Run any LLM on any hardware. 130% faster MoE </text>
+    <text x="31" y="104" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#4A5578">inference with ExpertFlow + TurboQuant KV compr…</text>
+    <circle cx="36" cy="164" r="5" fill="#f34b7d" filter="url(#glow)"/>
+    <text x="49" y="168" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#151A3C">C++</text>
+    <path d="M 205 158 L 206.8 162.2 L 211 162.8 L 207.7 165.9 L 208.6 170 L 205 167.4 L 201.4 170 L 202.3 165.9 L 199 162.8 L 203.2 162.2 Z" fill="#00A8C8" opacity="0.9"/>
+    <text x="217" y="168" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#4A5578">11</text>
+    <circle cx="265" cy="161" r="2.2" stroke="#00A8C8" stroke-width="1.4" fill="none"/>
+    <circle cx="265" cy="169" r="2.2" stroke="#00A8C8" stroke-width="1.4" fill="none"/>
+    <line x1="265" y1="163.2" x2="265" y2="166.8" stroke="#00A8C8" stroke-width="1.4"/>
+    <text x="273" y="168" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#4A5578">4</text>
+  </g>
+  <g>
+    <rect x="410" y="22" width="380" height="166" rx="10" fill="#E9EDFB" fill-opacity="0.9" stroke="#6D3FE8" stroke-opacity="0.3"/>
+    
+    <g stroke="#00A8C8" stroke-width="1.6" opacity="0.85" fill="none">
+      <path d="M 410 34 V 22 H 422"/>
+      <path d="M 790 176 V 188 H 778"/>
+    </g>
+    <text x="426" y="56" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="16.5" fill="#6D3FE8">Security-Team---Workspace-</text>
+    
+    <text x="426" y="84" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#4A5578">No description provided.</text>
+    <text x="426" y="104" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#4A5578"></text>
+    <circle cx="431" cy="164" r="5" fill="#3572A5" filter="url(#glow)"/>
+    <text x="444" y="168" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#151A3C">Python</text>
+    <path d="M 600 158 L 601.8 162.2 L 606 162.8 L 602.7 165.9 L 603.6 170 L 600 167.4 L 596.4 170 L 597.3 165.9 L 594 162.8 L 598.2 162.2 Z" fill="#6D3FE8" opacity="0.9"/>
+    <text x="612" y="168" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#4A5578">3</text>
+    <circle cx="660" cy="161" r="2.2" stroke="#6D3FE8" stroke-width="1.4" fill="none"/>
+    <circle cx="660" cy="169" r="2.2" stroke="#6D3FE8" stroke-width="1.4" fill="none"/>
+    <line x1="660" y1="163.2" x2="660" y2="166.8" stroke="#6D3FE8" stroke-width="1.4"/>
+    <text x="668" y="168" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#4A5578">1</text>
+  </g>
+  <g>
+    <rect x="805" y="22" width="380" height="166" rx="10" fill="#E9EDFB" fill-opacity="0.9" stroke="#E0218A" stroke-opacity="0.3"/>
+    
+    <g stroke="#00A8C8" stroke-width="1.6" opacity="0.85" fill="none">
+      <path d="M 805 34 V 22 H 817"/>
+      <path d="M 1185 176 V 188 H 1173"/>
+    </g>
+    <text x="821" y="56" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="16.5" fill="#E0218A">pentagi</text>
+    <text x="1169" y="54" text-anchor="end" font-family="Consolas, 'Courier New', monospace" font-size="9.5" letter-spacing="2" fill="#8A93B8">FORK</text>
+    <text x="821" y="84" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#4A5578">✨ Fully autonomous AI Agents system capable of p</text>
+    <text x="821" y="104" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#4A5578">erforming complex penetration testing tasks</text>
+    <circle cx="826" cy="164" r="5" fill="#8A93B8" filter="url(#glow)"/>
+    <text x="839" y="168" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#151A3C">N/A</text>
+    <path d="M 995 158 L 996.8 162.2 L 1001 162.8 L 997.7 165.9 L 998.6 170 L 995 167.4 L 991.4 170 L 992.3 165.9 L 989 162.8 L 993.2 162.2 Z" fill="#E0218A" opacity="0.9"/>
+    <text x="1007" y="168" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#4A5578">0</text>
+    <circle cx="1055" cy="161" r="2.2" stroke="#E0218A" stroke-width="1.4" fill="none"/>
+    <circle cx="1055" cy="169" r="2.2" stroke="#E0218A" stroke-width="1.4" fill="none"/>
+    <line x1="1055" y1="163.2" x2="1055" y2="166.8" stroke="#E0218A" stroke-width="1.4"/>
+    <text x="1063" y="168" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#4A5578">0</text>
+  </g>
+</svg>

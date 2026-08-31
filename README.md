@@ -32,7 +32,12 @@ $ systemctl status crespo.service
 > ● open to collaboration & innovation projects
 ```
 
-<div align="center"><img src="./assets/divider.svg" width="100%" alt=""/></div>
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="./assets/divider.light.svg"/>
+    <img src="./assets/divider.svg" width="100%" alt=""/>
+  </picture>
+</div>
 
 ## ◈ /TECH ARSENAL
 
@@ -46,25 +51,46 @@ $ systemctl status crespo.service
   </a>
 </div>
 
-<div align="center"><img src="./assets/divider.svg" width="100%" alt=""/></div>
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="./assets/divider.light.svg"/>
+    <img src="./assets/divider.svg" width="100%" alt=""/>
+  </picture>
+</div>
 
 ## ◈ /NEURAL METRICS
 
 <div align="center">
-  <img src="./assets/generated/stats.svg" width="100%" alt="GitHub metrics — stars, commits, PRs, issues, followers, repos"/>
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="./assets/generated/stats.light.svg"/>
+    <img src="./assets/generated/stats.svg" width="100%" alt="GitHub metrics — stars, commits, PRs, issues, followers, repos"/>
+  </picture>
   <br/>
   <img height="165" src="https://streak-stats.demolab.com?user=MartinCrespoC&background=0B0E2A&border=27315E&ring=7C4DFF&fire=FF2D78&currStreakLabel=00E5FF&sideLabels=A0ABC0&dates=5A6B8C&currStreakNum=FFFFFF&sideNums=FFFFFF" alt="contribution streak"/>
 </div>
 
-<div align="center"><img src="./assets/divider.svg" width="100%" alt=""/></div>
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="./assets/divider.light.svg"/>
+    <img src="./assets/divider.svg" width="100%" alt=""/>
+  </picture>
+</div>
 
 ## ◈ /LANGUAGE GRID
 
 <div align="center">
-  <img src="./assets/generated/langs.svg" width="100%" alt="top languages"/>
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="./assets/generated/langs.light.svg"/>
+    <img src="./assets/generated/langs.svg" width="100%" alt="top languages"/>
+  </picture>
 </div>
 
-<div align="center"><img src="./assets/divider.svg" width="100%" alt=""/></div>
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="./assets/divider.light.svg"/>
+    <img src="./assets/divider.svg" width="100%" alt=""/>
+  </picture>
+</div>
 
 ## ◈ /CONTRIBUTION CONSTELLATION — 3D
 
@@ -72,17 +98,30 @@ $ systemctl status crespo.service
   <img src="./profile-3d-contrib/profile-night-rainbow.svg" width="100%" alt="3D contribution graph"/>
 </div>
 
-<div align="center"><img src="./assets/divider.svg" width="100%" alt=""/></div>
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="./assets/divider.light.svg"/>
+    <img src="./assets/divider.svg" width="100%" alt=""/>
+  </picture>
+</div>
 
 ## ◈ /FEATURED SYSTEMS
 
 <div align="center">
   <a href="https://github.com/MartinCrespoC?tab=repositories">
-    <img src="./assets/generated/repos.svg" width="100%" alt="featured repositories"/>
+    <picture>
+      <source media="(prefers-color-scheme: light)" srcset="./assets/generated/repos.light.svg"/>
+      <img src="./assets/generated/repos.svg" width="100%" alt="featured repositories"/>
+    </picture>
   </a>
 </div>
 
-<div align="center"><img src="./assets/divider.svg" width="100%" alt=""/></div>
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="./assets/divider.light.svg"/>
+    <img src="./assets/divider.svg" width="100%" alt=""/>
+  </picture>
+</div>
 
 ## ◈ /CONTRIBUTION SNAKE
 
@@ -94,7 +133,12 @@ $ systemctl status crespo.service
   </picture>
 </div>
 
-<div align="center"><img src="./assets/divider.svg" width="100%" alt=""/></div>
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="./assets/divider.light.svg"/>
+    <img src="./assets/divider.svg" width="100%" alt=""/>
+  </picture>
+</div>
 
 ## ◈ /RANDOM TRANSMISSION
 

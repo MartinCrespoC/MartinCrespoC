@@ -12,7 +12,7 @@
   </defs>
   <rect width="1200" height="150" rx="12" fill="#0B0E2A"/>
   <g>
-    <rect x="15" y="22" width="183" height="106" rx="10" fill="#161B40" fill-opacity="0.55" stroke="#00E5FF" stroke-opacity="0.22"/>
+    <rect x="15" y="22" width="183" height="106" rx="10" fill="#161B40" fill-opacity="0.55" stroke="#00E5FF" stroke-opacity="0.3"/>
     <rect x="15" y="22" width="183" height="3" rx="1.5" fill="#00E5FF" opacity="0.85">
       <animate attributeName="opacity" values="0.85;0.4;0.85" dur="2.0s" repeatCount="indefinite"/>
     </rect>
@@ -29,41 +29,41 @@
     </circle>
   </g>
   <g>
-    <rect x="210" y="22" width="183" height="106" rx="10" fill="#161B40" fill-opacity="0.55" stroke="#7C4DFF" stroke-opacity="0.22"/>
+    <rect x="210" y="22" width="183" height="106" rx="10" fill="#161B40" fill-opacity="0.55" stroke="#7C4DFF" stroke-opacity="0.3"/>
     <rect x="210" y="22" width="183" height="3" rx="1.5" fill="#7C4DFF" opacity="0.85">
       <animate attributeName="opacity" values="0.85;0.4;0.85" dur="2.4s" repeatCount="indefinite"/>
     </rect>
     
-    <g stroke="#7C4DFF" stroke-width="1.6" opacity="0.7" fill="none">
+    <g stroke="#00E5FF" stroke-width="1.6" opacity="0.7" fill="none">
       <path d="M 210 34 V 22 H 222"/>
       <path d="M 393 116 V 128 H 381"/>
     </g>
     <circle cx="226" cy="48" r="2.6" stroke="#7C4DFF" stroke-width="1.6" fill="none"/><circle cx="238" cy="48" r="2.6" stroke="#7C4DFF" stroke-width="1.6" fill="none"/><line x1="228.6" y1="48" x2="235.4" y2="48" stroke="#7C4DFF" stroke-width="1.6" fill="none"/>
     <text x="379" y="52" text-anchor="end" font-family="Consolas, 'Courier New', monospace" font-size="9.5" letter-spacing="1.6" fill="#5A6B8C">COMMITS</text>
-    <text x="226" y="100" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="34" fill="#FFFFFF" filter="url(#num-glow)">36</text>
+    <text x="226" y="100" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="34" fill="#FFFFFF" filter="url(#num-glow)">512</text>
     <circle cx="377" cy="112" r="2.4" fill="#7C4DFF">
       <animate attributeName="opacity" values="1;0.2;1" dur="1.85s" repeatCount="indefinite"/>
     </circle>
   </g>
   <g>
-    <rect x="405" y="22" width="183" height="106" rx="10" fill="#161B40" fill-opacity="0.55" stroke="#FF2D78" stroke-opacity="0.22"/>
+    <rect x="405" y="22" width="183" height="106" rx="10" fill="#161B40" fill-opacity="0.55" stroke="#FF2D78" stroke-opacity="0.3"/>
     <rect x="405" y="22" width="183" height="3" rx="1.5" fill="#FF2D78" opacity="0.85">
       <animate attributeName="opacity" values="0.85;0.4;0.85" dur="2.8s" repeatCount="indefinite"/>
     </rect>
     
-    <g stroke="#FF2D78" stroke-width="1.6" opacity="0.7" fill="none">
+    <g stroke="#00E5FF" stroke-width="1.6" opacity="0.7" fill="none">
       <path d="M 405 34 V 22 H 417"/>
       <path d="M 588 116 V 128 H 576"/>
     </g>
     <circle cx="422" cy="43" r="2.4" stroke="#FF2D78" stroke-width="1.6" fill="none"/><circle cx="422" cy="53" r="2.4" stroke="#FF2D78" stroke-width="1.6" fill="none"/><circle cx="432" cy="53" r="2.4" stroke="#FF2D78" stroke-width="1.6" fill="none"/><path d="M 422 45.4 V 50.6 M 422 45 C 432 45 432 48 432 50.6" stroke="#FF2D78" stroke-width="1.6" fill="none"/>
     <text x="574" y="52" text-anchor="end" font-family="Consolas, 'Courier New', monospace" font-size="9.5" letter-spacing="1.6" fill="#5A6B8C">PULL REQUESTS</text>
-    <text x="421" y="100" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="34" fill="#FFFFFF" filter="url(#num-glow)">1</text>
+    <text x="421" y="100" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="34" fill="#FFFFFF" filter="url(#num-glow)">4</text>
     <circle cx="572" cy="112" r="2.4" fill="#FF2D78">
       <animate attributeName="opacity" values="1;0.2;1" dur="2.10s" repeatCount="indefinite"/>
     </circle>
   </g>
   <g>
-    <rect x="600" y="22" width="183" height="106" rx="10" fill="#161B40" fill-opacity="0.55" stroke="#00E5FF" stroke-opacity="0.22"/>
+    <rect x="600" y="22" width="183" height="106" rx="10" fill="#161B40" fill-opacity="0.55" stroke="#00E5FF" stroke-opacity="0.3"/>
     <rect x="600" y="22" width="183" height="3" rx="1.5" fill="#00E5FF" opacity="0.85">
       <animate attributeName="opacity" values="0.85;0.4;0.85" dur="3.2s" repeatCount="indefinite"/>
     </rect>
@@ -80,12 +80,12 @@
     </circle>
   </g>
   <g>
-    <rect x="795" y="22" width="183" height="106" rx="10" fill="#161B40" fill-opacity="0.55" stroke="#7C4DFF" stroke-opacity="0.22"/>
+    <rect x="795" y="22" width="183" height="106" rx="10" fill="#161B40" fill-opacity="0.55" stroke="#7C4DFF" stroke-opacity="0.3"/>
     <rect x="795" y="22" width="183" height="3" rx="1.5" fill="#7C4DFF" opacity="0.85">
       <animate attributeName="opacity" values="0.85;0.4;0.85" dur="3.6s" repeatCount="indefinite"/>
     </rect>
     
-    <g stroke="#7C4DFF" stroke-width="1.6" opacity="0.7" fill="none">
+    <g stroke="#00E5FF" stroke-width="1.6" opacity="0.7" fill="none">
       <path d="M 795 34 V 22 H 807"/>
       <path d="M 978 116 V 128 H 966"/>
     </g>
@@ -97,12 +97,12 @@
     </circle>
   </g>
   <g>
-    <rect x="990" y="22" width="183" height="106" rx="10" fill="#161B40" fill-opacity="0.55" stroke="#FF2D78" stroke-opacity="0.22"/>
+    <rect x="990" y="22" width="183" height="106" rx="10" fill="#161B40" fill-opacity="0.55" stroke="#FF2D78" stroke-opacity="0.3"/>
     <rect x="990" y="22" width="183" height="3" rx="1.5" fill="#FF2D78" opacity="0.85">
       <animate attributeName="opacity" values="0.85;0.4;0.85" dur="4.0s" repeatCount="indefinite"/>
     </rect>
     
-    <g stroke="#FF2D78" stroke-width="1.6" opacity="0.7" fill="none">
+    <g stroke="#00E5FF" stroke-width="1.6" opacity="0.7" fill="none">
       <path d="M 990 34 V 22 H 1002"/>
       <path d="M 1173 116 V 128 H 1161"/>
     </g>
