@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet"/>
+<style>
+  html, body { margin: 0; width: 1200px; height: 300px; overflow: hidden; background: #0B0E2A; }
+  #stage { position: relative; width: 1200px; height: 300px; }
+  canvas { position: absolute; inset: 0; }
+  .grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .bracket { position: absolute; width: 16px; height: 16px; border: 2px solid rgba(0,229,255,.65); }
+  .tl { top: 18px; left: 18px; border-right: 0; border-bottom: 0; }
+  .tr { top: 18px; right: 18px; border-left: 0; border-bottom: 0; }
+  .bl { bottom: 18px; left: 18px; border-right: 0; border-top: 0; }
+  .br { bottom: 18px; right: 18px; border-left: 0; border-top: 0; }
+  .chip {
+    position: absolute; top: 40px; left: 50%; transform: translateX(-50%);
+    display: flex; align-items: center; gap: 10px;
+    padding: 7px 22px; border-radius: 999px;
+    border: 1px solid rgba(0,229,255,.35); background: rgba(22,27,64,.55);
+    font: 600 12px 'JetBrains Mono', Consolas, monospace; letter-spacing: 4px; color: #00E5FF;
+  }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: #00E5FF; }
+  .name {
+    position: absolute; top: 92px; width: 100%; text-align: center;
+    font: 800 62px 'Space Grotesk', 'Segoe UI', sans-serif; letter-spacing: 3px;
+    background: linear-gradient(90deg, #7C4DFF, #FFFFFF 48%, #00E5FF);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    filter: drop-shadow(0 0 14px rgba(0,229,255,.30)) drop-shadow(0 0 26px rgba(124,77,255,.25));
+  }
+  .sub {
+    position: absolute; top: 184px; width: 100%; text-align: center;
+    font: 500 16px 'JetBrains Mono', Consolas, monospace; letter-spacing: 9px; color: #00E5FF; opacity: .92;
+  }
+  .sub .x { color: #A0ABC0; opacity: .6; }
+  .hairline {
+    position: absolute; top: 231px; left: 360px; width: 480px; height: 1.5px;
+    background: linear-gradient(90deg, transparent, #00E5FF, transparent);
+  }
+  .diamond {
+    position: absolute; top: 225px; left: 594px; width: 12px; height: 12px;
+    background: #00E5FF; transform: rotate(45deg);
+    box-shadow: 0 0 8px rgba(0,229,255,.8);
+  }
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="c" width="2400" height="600" style="width:1200px;height:300px"></canvas>
+  <div class="grid"></div>
+  <div class="bracket tl"></div><div class="bracket tr"></div>
+  <div class="bracket bl"></div><div class="bracket br"></div>
+  <div class="chip"><div class="dot" id="chipDot"></div><span>SYSTEM ONLINE</span></div>
+  <div class="name">JUAN MARTIN CRESPO</div>
+  <div class="sub">IT STRATEGY <span class="x">x</span> GENAI INNOVATION</div>
+  <div class="hairline"></div>
+  <div class="diamond" id="diamond"></div>
+</div>
+<script>
+'use strict';
+const W = 1200, H = 300;
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+ctx.scale(2, 2);
+
+/* --- static nebula layer, prerendered once --- */
+const neb = document.createElement('canvas');
+neb.width = 2400; neb.height = 600;
+const nctx = neb.getContext('2d');
+nctx.scale(2, 2);
+nctx.fillStyle = '#0B0E2A';
+nctx.fillRect(0, 0, W, H);
+function nebula(x, y, r, color) {
+  const g = nctx.createRadialGradient(x, y, 0, x, y, r);
+  g.addColorStop(0, color);
+  g.addColorStop(1, 'rgba(11,14,42,0)');
+  nctx.fillStyle = g;
+  nctx.fillRect(0, 0, W, H);
+}
+nebula(215, 70, 360, 'rgba(124,77,255,0.34)');
+nebula(990, 235, 380, 'rgba(0,229,255,0.26)');
+nebula(630, 320, 300, 'rgba(255,45,120,0.15)');
+
+/* --- particle field --- */
+const PALETTE = [[0,229,255],[124,77,255],[255,255,255],[255,45,120]];
+const N = 78;
+const P = [];
+for (let i = 0; i < N; i++) {
+  P.push({
+    x: Math.random() * W,
+    y: Math.random() * H,
+    vx: (Math.random() - 0.5) * 0.55,
+    vy: (Math.random() - 0.5) * 0.30,
+    r: 0.8 + Math.random() * 1.7,
+    c: PALETTE[Math.floor(Math.random() * PALETTE.length)],
+    ph: Math.random() * Math.PI * 2,
+    tw: 0.4 + Math.random() * 1.1,
+  });
+}
+
+/* --- shooting stars --- */
+const shooters = [];
+let nextShot = 1400 + Math.random() * 1500;
+
+const chipDot = document.getElementById('chipDot');
+const diamond = document.getElementById('diamond');
+let simT = 0;
+
+function step(ms) {
+  simT += ms;
+  const dt = ms / 16.7;
+
+  ctx.drawImage(neb, 0, 0, W, H);
+
+  /* links between nearby particles */
+  ctx.lineWidth = 0.7;
+  for (let i = 0; i < N; i++) {
+    const a = P[i];
+    for (let j = i + 1; j < N; j++) {
+      const b = P[j];
+      const dx = a.x - b.x, dy = a.y - b.y;
+      const d2 = dx * dx + dy * dy;
+      if (d2 < 115 * 115) {
+        const d = Math.sqrt(d2);
+        const alpha = (1 - d / 115) * 0.34;
+        const c = (a.c === b.c && a.c[0] === 0) ? '0,229,255' : '124,77,255';
+        ctx.strokeStyle = `rgba(${c},${alpha.toFixed(3)})`;
+        ctx.beginPath();
+        ctx.moveTo(a.x, a.y);
+        ctx.lineTo(b.x, b.y);
+        ctx.stroke();
+      }
+    }
+  }
+
+  /* particles */
+  for (const p of P) {
+    p.x += p.vx * dt;
+    p.y += p.vy * dt;
+    if (p.x < -10) p.x = W + 10; else if (p.x > W + 10) p.x = -10;
+    if (p.y < -10) p.y = H + 10; else if (p.y > H + 10) p.y = -10;
+    const alpha = 0.45 + 0.55 * Math.abs(Math.sin(simT * 0.001 * p.tw + p.ph));
+    ctx.shadowBlur = 8;
+    ctx.shadowColor = `rgba(${p.c[0]},${p.c[1]},${p.c[2]},0.9)`;
+    ctx.fillStyle = `rgba(${p.c[0]},${p.c[1]},${p.c[2]},${alpha.toFixed(3)})`;
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    ctx.fill();
+  }
+  ctx.shadowBlur = 0;
+
+  /* shooting stars */
+  nextShot -= ms;
+  if (nextShot <= 0) {
+    nextShot = 2200 + Math.random() * 2400;
+    shooters.push({
+      x: 80 + Math.random() * (W * 0.6),
+      y: -20,
+      vx: 5.2 + Math.random() * 2.4,
+      vy: 2.4 + Math.random() * 1.2,
+      life: 900,
+    });
+  }
+  for (let i = shooters.length - 1; i >= 0; i--) {
+    const s = shooters[i];
+    s.x += s.vx * dt;
+    s.y += s.vy * dt;
+    s.life -= ms;
+    if (s.life <= 0 || s.y > H + 30) { shooters.splice(i, 1); continue; }
+    const fade = Math.min(1, s.life / 350);
+    const tx = s.x - s.vx * 14, ty = s.y - s.vy * 14;
+    const g = ctx.createLinearGradient(tx, ty, s.x, s.y);
+    g.addColorStop(0, 'rgba(0,229,255,0)');
+    g.addColorStop(1, `rgba(0,229,255,${(0.85 * fade).toFixed(3)})`);
+    ctx.strokeStyle = g;
+    ctx.lineWidth = 1.6;
+    ctx.beginPath();
+    ctx.moveTo(tx, ty);
+    ctx.lineTo(s.x, s.y);
+    ctx.stroke();
+    ctx.shadowBlur = 10;
+    ctx.shadowColor = '#FFFFFF';
+    ctx.fillStyle = `rgba(255,255,255,${(0.95 * fade).toFixed(3)})`;
+    ctx.beginPath();
+    ctx.arc(s.x, s.y, 1.7, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.shadowBlur = 0;
+  }
+
+  /* DOM pulses driven by sim time */
+  chipDot.style.opacity = (0.45 + 0.55 * Math.abs(Math.sin(simT * 0.0038))).toFixed(3);
+  diamond.style.opacity = (0.5 + 0.5 * Math.abs(Math.sin(simT * 0.0024 + 1))).toFixed(3);
+}
+
+/* manual stepping for deterministic frame capture, rAF for live viewing */
+if (location.search.includes('manual')) {
+  window.__step = step;
+} else {
+  let last = performance.now();
+  const loop = (now) => { step(Math.min(now - last, 50)); last = now; requestAnimationFrame(loop); };
+  requestAnimationFrame(loop);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "martincrespoc-profile",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dynamic GitHub profile assets: animated particle header + self-hosted metrics",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MartinCrespoC/MartinCrespoC.git"
+  },
+  "scripts": {
+    "render:header": "node scripts/render-header.mjs",
+    "stats": "node scripts/generate-stats.js"
+  },
+  "devDependencies": {
+    "playwright": "1.55.0"
+  }
+}

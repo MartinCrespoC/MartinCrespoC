@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/header.svg" width="100%" alt="Juan Martín Crespo — IT Strategy x GenAI Innovation — particle constellation header"/>
+<img src="./assets/header.webp" width="100%" alt="Juan Martín Crespo — IT Strategy x GenAI Innovation — living particle constellation"/>
 
 <a href="https://git.io/typing-svg">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3200&pause=900&color=00E5FF&center=true&vCenter=true&multiline=false&width=720&height=34&lines=IT+Strategy+%26+Innovation+%C2%B7+15%2B+years;ServiceNow+%C2%B7+SAP+%C2%B7+GenAI+(Vertex+AI)+Integration;Optimizing+business+processes+with+AI;AI+Agents+%26+LLM+inference+on+the+side;Guadalajara+MX+%E2%86%92+the+world" alt="Typing SVG"/>
