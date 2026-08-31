@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/header.webp" width="100%" alt="Juan Martín Crespo — IT Strategy x GenAI Innovation — living particle constellation"/>
+<img src="https://raw.githubusercontent.com/MartinCrespoC/MartinCrespoC/live/header.webp" width="100%" alt="Juan Martín Crespo — IT Strategy x GenAI Innovation — living particle constellation"/>
 
 <a href="https://git.io/typing-svg">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3200&pause=900&color=00E5FF&center=true&vCenter=true&multiline=false&width=720&height=34&lines=IT+Strategy+%26+Innovation+%C2%B7+15%2B+years;ServiceNow+%C2%B7+SAP+%C2%B7+GenAI+(Vertex+AI)+Integration;Optimizing+business+processes+with+AI;AI+Agents+%26+LLM+inference+on+the+side;Guadalajara+MX+%E2%86%92+the+world" alt="Typing SVG"/>
@@ -62,8 +62,8 @@ $ systemctl status crespo.service
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: light)" srcset="./assets/generated/stats.light.svg"/>
-    <img src="./assets/generated/stats.svg" width="100%" alt="GitHub metrics — stars, commits, PRs, issues, followers, repos"/>
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MartinCrespoC/MartinCrespoC/live/stats/stats.light.svg"/>
+    <img src="https://raw.githubusercontent.com/MartinCrespoC/MartinCrespoC/live/stats/stats.svg" width="100%" alt="GitHub metrics — stars, commits, PRs, issues, followers, repos"/>
   </picture>
   <br/>
   <picture>
@@ -83,8 +83,8 @@ $ systemctl status crespo.service
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: light)" srcset="./assets/generated/langs.light.svg"/>
-    <img src="./assets/generated/langs.svg" width="100%" alt="top languages"/>
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MartinCrespoC/MartinCrespoC/live/stats/langs.light.svg"/>
+    <img src="https://raw.githubusercontent.com/MartinCrespoC/MartinCrespoC/live/stats/langs.svg" width="100%" alt="top languages"/>
   </picture>
 </div>
 
@@ -99,8 +99,8 @@ $ systemctl status crespo.service
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-season.svg"/>
-    <img src="./profile-3d-contrib/profile-night-rainbow.svg" width="100%" alt="3D contribution graph"/>
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MartinCrespoC/MartinCrespoC/live/3d/profile-season.svg"/>
+    <img src="https://raw.githubusercontent.com/MartinCrespoC/MartinCrespoC/live/3d/profile-night-rainbow.svg" width="100%" alt="3D contribution graph"/>
   </picture>
 </div>
 
@@ -116,8 +116,8 @@ $ systemctl status crespo.service
 <div align="center">
   <a href="https://github.com/MartinCrespoC?tab=repositories">
     <picture>
-      <source media="(prefers-color-scheme: light)" srcset="./assets/generated/repos.light.svg"/>
-      <img src="./assets/generated/repos.svg" width="100%" alt="featured repositories"/>
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MartinCrespoC/MartinCrespoC/live/stats/repos.light.svg"/>
+      <img src="https://raw.githubusercontent.com/MartinCrespoC/MartinCrespoC/live/stats/repos.svg" width="100%" alt="featured repositories"/>
     </picture>
   </a>
 </div>

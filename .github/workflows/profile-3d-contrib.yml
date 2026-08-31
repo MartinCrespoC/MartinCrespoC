@@ -24,18 +24,35 @@ jobs:
       - name: Generate 3D contribution SVGs
         uses: yoshi389111/github-profile-3d-contrib@0.7.1
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
 
-      - name: Commit generated graphs
+      - name: Publish to live branch
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add profile-3d-contrib/
-          if ! git diff --cached --quiet; then
-            git commit -m "chore: update 3d contribution graph"
-            for i in 1 2 3 4; do
-              git pull --rebase origin main && git push && break
-              sleep 3
-            done
+          git fetch origin live || true
+          if git rev-parse --verify origin/live >/dev/null 2>&1; then
+            git checkout live
+            git reset --hard origin/live
+          else
+            git checkout --orphan live
+            git rm -rf .
           fi
+          mkdir -p 3d
+          cp profile-3d-contrib/*.svg 3d/
+          git add -A
+          if git diff --cached --quiet; then
+            echo "no changes"
+            exit 0
+          fi
+          git commit -m "chore: update 3d contribution graph"
+          for i in 1 2 3 4; do
+            git fetch origin live || true
+            if git rev-parse --verify origin/live >/dev/null 2>&1; then
+              git pull --rebase origin live || true
+            fi
+            git push origin live && exit 0
+            sleep 3
+          done
+          exit 1

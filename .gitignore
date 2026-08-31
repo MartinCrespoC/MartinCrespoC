@@ -1,2 +1,5 @@
 node_modules/
 frames_header/
+assets/generated/
+assets/header.webp
+profile-3d-contrib/

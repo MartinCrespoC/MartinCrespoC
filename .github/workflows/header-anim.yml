@@ -41,15 +41,31 @@ jobs:
       - name: Render animated header
         run: node scripts/render-header.mjs
 
-      - name: Commit new constellation
+      - name: Publish to live branch
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/header.webp
-          if ! git diff --cached --quiet; then
-            git commit -m "chore: re-render animated particle header"
-            for i in 1 2 3 4; do
-              git pull --rebase origin main && git push && break
-              sleep 3
-            done
+          git fetch origin live || true
+          if git rev-parse --verify origin/live >/dev/null 2>&1; then
+            git checkout live
+            git reset --hard origin/live
+          else
+            git checkout --orphan live
+            git rm -rf .
           fi
+          cp assets/header.webp header.webp
+          git add -A
+          if git diff --cached --quiet; then
+            echo "no changes"
+            exit 0
+          fi
+          git commit -m "chore: re-render animated particle header"
+          for i in 1 2 3 4; do
+            git fetch origin live || true
+            if git rev-parse --verify origin/live >/dev/null 2>&1; then
+              git pull --rebase origin live || true
+            fi
+            git push origin live && exit 0
+            sleep 3
+          done
+          exit 1

@@ -2,7 +2,7 @@ name: Regenerate profile metrics
 
 on:
   schedule:
-    - cron: "0 5 * * *"
+    - cron: "7 * * * *"
   workflow_dispatch:
   push:
     branches: [main]
@@ -30,18 +30,35 @@ jobs:
       - name: Generate metric cards
         run: node scripts/generate-stats.js
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
           GH_USER: ${{ github.repository_owner }}
 
-      - name: Commit metric cards
+      - name: Publish to live branch
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/generated/
-          if ! git diff --cached --quiet; then
-            git commit -m "chore: refresh profile metrics"
-            for i in 1 2 3 4; do
-              git pull --rebase origin main && git push && break
-              sleep 3
-            done
+          git fetch origin live || true
+          if git rev-parse --verify origin/live >/dev/null 2>&1; then
+            git checkout live
+            git reset --hard origin/live
+          else
+            git checkout --orphan live
+            git rm -rf .
           fi
+          mkdir -p stats
+          cp assets/generated/*.svg stats/
+          git add -A
+          if git diff --cached --quiet; then
+            echo "no changes"
+            exit 0
+          fi
+          git commit -m "chore: refresh live metrics"
+          for i in 1 2 3 4; do
+            git fetch origin live || true
+            if git rev-parse --verify origin/live >/dev/null 2>&1; then
+              git pull --rebase origin live || true
+            fi
+            git push origin live && exit 0
+            sleep 3
+          done
+          exit 1
