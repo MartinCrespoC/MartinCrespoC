@@ -23,7 +23,8 @@ jobs:
             dist/github-snake.svg?color_snake=#7C4DFF&color_dots=#DFE3F4,#BCC3EA,#8E97DC,#7C4DFF,#00A8C8
             dist/github-snake-dark.svg?color_snake=#7C4DFF&color_dots=#161B40,#27315E,#7C4DFF,#00E5FF,#FF2D78
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # GH_PAT (user-scoped token) lets the calendar include private contributions
+          GITHUB_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
 
       - name: Publish to output branch
         uses: crazy-max/ghaction-github-pages@v4

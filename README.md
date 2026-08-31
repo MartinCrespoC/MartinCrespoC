@@ -66,7 +66,10 @@ $ systemctl status crespo.service
     <img src="./assets/generated/stats.svg" width="100%" alt="GitHub metrics — stars, commits, PRs, issues, followers, repos"/>
   </picture>
   <br/>
-  <img height="165" src="https://streak-stats.demolab.com?user=MartinCrespoC&background=0B0E2A&border=27315E&ring=7C4DFF&fire=FF2D78&currStreakLabel=00E5FF&sideLabels=A0ABC0&dates=5A6B8C&currStreakNum=FFFFFF&sideNums=FFFFFF" alt="contribution streak"/>
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=MartinCrespoC&background=FFFFFF&border=DDDEE8&ring=7C4DFF&fire=E0218A&currStreakLabel=00A8C8&sideLabels=4A5578&dates=8A93B8&currStreakNum=151A3C&sideNums=151A3C"/>
+    <img height="165" src="https://streak-stats.demolab.com?user=MartinCrespoC&background=0B0E2A&border=27315E&ring=7C4DFF&fire=FF2D78&currStreakLabel=00E5FF&sideLabels=A0ABC0&dates=5A6B8C&currStreakNum=FFFFFF&sideNums=FFFFFF" alt="contribution streak"/>
+  </picture>
 </div>
 
 <div align="center">
@@ -95,7 +98,10 @@ $ systemctl status crespo.service
 ## ◈ /CONTRIBUTION CONSTELLATION — 3D
 
 <div align="center">
-  <img src="./profile-3d-contrib/profile-night-rainbow.svg" width="100%" alt="3D contribution graph"/>
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-season.svg"/>
+    <img src="./profile-3d-contrib/profile-night-rainbow.svg" width="100%" alt="3D contribution graph"/>
+  </picture>
 </div>
 
 <div align="center">
@@ -143,7 +149,10 @@ $ systemctl status crespo.service
 ## ◈ /RANDOM TRANSMISSION
 
 <div align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" width="80%" alt="random dev quote"/>
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=light"/>
+    <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" width="80%" alt="random dev quote"/>
+  </picture>
 </div>
 
 <img src="./assets/footer.svg" width="100%" alt="footer — system status online"/>
