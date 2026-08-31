@@ -38,17 +38,15 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git fetch origin live || true
-          if git rev-parse --verify origin/live >/dev/null 2>&1; then
-            git checkout live
-            git reset --hard origin/live
-          else
-            git checkout --orphan live
-            git rm -rf .
-          fi
+          mkdir -p /tmp/artifacts
+          cp assets/generated/*.svg /tmp/artifacts/
+          git fetch origin live
+          git worktree add --detach /tmp/livewt origin/live
+          cd /tmp/livewt
+          git switch -C live
           mkdir -p stats
-          cp assets/generated/*.svg stats/
-          git add -A
+          cp /tmp/artifacts/*.svg stats/
+          git add stats
           if git diff --cached --quiet; then
             echo "no changes"
             exit 0
@@ -56,9 +54,7 @@ jobs:
           git commit -m "chore: refresh live metrics"
           for i in 1 2 3 4; do
             git fetch origin live || true
-            if git rev-parse --verify origin/live >/dev/null 2>&1; then
-              git pull --rebase origin live || true
-            fi
+            git pull --rebase origin live || true
             git push origin live && exit 0
             sleep 3
           done
