@@ -52,7 +52,7 @@
     <circle cx="1045" cy="100" r="1.2" fill="#7C4DFF" opacity="0.6"/>
   </g>
 
-  <text x="600" y="72" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="13" letter-spacing="5" fill="#A0ABC0" opacity="0.85">© 2026 JUAN MARTIN CRESPO <tspan fill="#7C4DFF">//</tspan> SECURE AI ARCHITECT</text>
+  <text x="600" y="72" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="13" letter-spacing="5" fill="#A0ABC0" opacity="0.85">© 2026 JUAN MARTÍN CRESPO C. <tspan fill="#7C4DFF">//</tspan> IT STRATEGY &amp; INNOVATION</text>
 
   <g transform="translate(600,100)">
     <circle cx="-98" cy="0" r="4" fill="#22C55E">

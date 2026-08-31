@@ -1,15 +1,16 @@
 <div align="center">
 
-<img src="./assets/header.svg" width="100%" alt="Juan Martin Crespo — AI Engineer x Cybersecurity — particle constellation header"/>
+<img src="./assets/header.svg" width="100%" alt="Juan Martín Crespo — IT Strategy x GenAI Innovation — particle constellation header"/>
 
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3200&pause=900&color=00E5FF&center=true&vCenter=true&multiline=false&width=720&height=34&lines=AI+Engineer+%C2%B7+LLM+Inference+%26+Autonomous+Agents;Cybersecurity+%C2%B7+Offensive+Security+Automation;C%2B%2B+%2F+Python+%C2%B7+Systems+that+think;Welcome+to+my+corner+of+the+galaxy" alt="Typing SVG"/>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3200&pause=900&color=00E5FF&center=true&vCenter=true&multiline=false&width=720&height=34&lines=IT+Strategy+%26+Innovation+%C2%B7+15%2B+years;ServiceNow+%C2%B7+SAP+%C2%B7+GenAI+(Vertex+AI)+Integration;Optimizing+business+processes+with+AI;AI+Agents+%26+LLM+inference+on+the+side;Guadalajara+MX+%E2%86%92+the+world" alt="Typing SVG"/>
 </a>
 
 <p>
   <img src="https://komarev.com/ghpvc/?username=MartinCrespoC&label=PROFILE+VIEWS&color=7C4DFF&style=for-the-badge&labelColor=0B0E2A" alt="profile views"/>
   <a href="https://github.com/MartinCrespoC?tab=followers"><img src="https://img.shields.io/github/followers/MartinCrespoC?label=FOLLOWERS&style=for-the-badge&color=00E5FF&labelColor=0B0E2A" alt="followers"/></a>
   <a href="https://www.linkedin.com/in/jmartincc/"><img src="https://img.shields.io/badge/LINKEDIN-jmartincc-0B0E2A?style=for-the-badge&logo=linkedin&logoColor=white&color=0A66C2&labelColor=0B0E2A" alt="linkedin"/></a>
+  <img src="https://img.shields.io/badge/BASED_IN-GUADALAJARA_MX-FF2D78?style=for-the-badge&labelColor=0B0E2A" alt="location"/>
 </p>
 
 </div>
@@ -18,15 +19,17 @@
 
 ```bash
 $ whoami
-> Juan Martin Crespo — AI Engineer x Cybersecurity
+> Juan Martín Crespo Calderón — IT Strategy & Innovation
+> Guadalajara, MX · 15+ years driving digital transformation
 
 $ cat /focus
-> Autonomous AI agents for offensive security & pentesting
-> LLM inference optimization — C++ / llama.cpp internals (TurboQuant)
-> Building intelligent systems that stay secure by design
+> ServiceNow · SAP · GenAI (Vertex AI) integration
+> Optimizing business processes through intelligent automation
+> Side quests: autonomous AI agents & LLM inference (C++ / llama.cpp)
 
 $ systemctl status crespo.service
-> ● active (running) — open to collaboration & research
+> ● active (running) — ServiceNow Consultant @ Nadro
+> ● open to collaboration & innovation projects
 ```
 
 <div align="center"><img src="./assets/divider.svg" width="100%" alt=""/></div>
