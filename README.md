@@ -51,12 +51,17 @@ $ systemctl status crespo.service
 ## ◈ /NEURAL METRICS
 
 <div align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=MartinCrespoC&show_icons=true&count_private=true&bg_color=0B0E2A&title_color=00E5FF&text_color=A0ABC0&icon_color=7C4DFF&border_color=27315E&ring_color=00E5FF" alt="GitHub stats"/>
-  <img height="170" src="https://streak-stats.demolab.com?user=MartinCrespoC&background=0B0E2A&border=27315E&ring=7C4DFF&fire=FF2D78&currStreakLabel=00E5FF&sideLabels=A0ABC0&dates=5A6B8C&currStreakNum=FFFFFF&sideNums=FFFFFF" alt="contribution streak"/>
+  <img src="./assets/generated/stats.svg" width="100%" alt="GitHub metrics — stars, commits, PRs, issues, followers, repos"/>
+  <br/>
+  <img height="165" src="https://streak-stats.demolab.com?user=MartinCrespoC&background=0B0E2A&border=27315E&ring=7C4DFF&fire=FF2D78&currStreakLabel=00E5FF&sideLabels=A0ABC0&dates=5A6B8C&currStreakNum=FFFFFF&sideNums=FFFFFF" alt="contribution streak"/>
 </div>
 
+<div align="center"><img src="./assets/divider.svg" width="100%" alt=""/></div>
+
+## ◈ /LANGUAGE GRID
+
 <div align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MartinCrespoC&layout=compact&bg_color=0B0E2A&title_color=00E5FF&text_color=A0ABC0&border_color=27315E&langs_count=8" alt="top languages"/>
+  <img src="./assets/generated/langs.svg" width="100%" alt="top languages"/>
 </div>
 
 <div align="center"><img src="./assets/divider.svg" width="100%" alt=""/></div>
@@ -69,25 +74,11 @@ $ systemctl status crespo.service
 
 <div align="center"><img src="./assets/divider.svg" width="100%" alt=""/></div>
 
-## ◈ /ACTIVITY STREAM
-
-<div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=MartinCrespoC&bg_color=0B0E2A&color=A0ABC0&line=7C4DFF&point=00E5FF&area=true&area_color=7C4DFF&hide_border=true&custom_title=ACTIVITY%20STREAM" width="100%" alt="activity graph"/>
-</div>
-
-<div align="center"><img src="./assets/divider.svg" width="100%" alt=""/></div>
-
 ## ◈ /FEATURED SYSTEMS
 
 <div align="center">
-  <a href="https://github.com/MartinCrespoC/QuantumLeap---Llama.cpp-TurboQuant">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=MartinCrespoC&repo=QuantumLeap---Llama.cpp-TurboQuant&bg_color=0B0E2A&title_color=00E5FF&text_color=A0ABC0&icon_color=7C4DFF&border_color=27315E" alt="QuantumLeap Llama.cpp TurboQuant"/>
-  </a>
-  <a href="https://github.com/MartinCrespoC/Security-Team---Workspace-">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=MartinCrespoC&repo=Security-Team---Workspace-&bg_color=0B0E2A&title_color=00E5FF&text_color=A0ABC0&icon_color=7C4DFF&border_color=27315E" alt="Security Team Workspace"/>
-  </a>
-  <a href="https://github.com/MartinCrespoC/pentagi">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=MartinCrespoC&repo=pentagi&bg_color=0B0E2A&title_color=00E5FF&text_color=A0ABC0&icon_color=7C4DFF&border_color=27315E" alt="pentagi"/>
+  <a href="https://github.com/MartinCrespoC?tab=repositories">
+    <img src="./assets/generated/repos.svg" width="100%" alt="featured repositories"/>
   </a>
 </div>
 
@@ -101,14 +92,6 @@ $ systemctl status crespo.service
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MartinCrespoC/MartinCrespoC/output/github-snake.svg"/>
     <img src="https://raw.githubusercontent.com/MartinCrespoC/MartinCrespoC/output/github-snake-dark.svg" alt="snake eating my contributions" width="100%"/>
   </picture>
-</div>
-
-<div align="center"><img src="./assets/divider.svg" width="100%" alt=""/></div>
-
-## ◈ /TROPHY VAULT
-
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=MartinCrespoC&theme=discord&no-frame=true&no-bg=true&margin-w=8&column=6" width="100%" alt="trophies"/>
 </div>
 
 <div align="center"><img src="./assets/divider.svg" width="100%" alt=""/></div>
