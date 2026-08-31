@@ -1,0 +1,23 @@
+<svg width="1200" height="26" viewBox="0 0 1200 26" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="divider">
+  <defs>
+    <linearGradient id="d-hairline" gradientUnits="userSpaceOnUse" x1="80" y1="13" x2="1120" y2="13">
+      <stop offset="0%" stop-color="#7C4DFF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00E5FF" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#7C4DFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="d-glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <line x1="80" y1="13" x2="1120" y2="13" stroke="url(#d-hairline)" stroke-width="1.8"/>
+  <rect x="594" y="7" width="12" height="12" transform="rotate(45 600 13)" fill="none" stroke="#00E5FF" stroke-width="1.2" filter="url(#d-glow)">
+    <animate attributeName="opacity" values="0.9;0.3;0.9" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  <circle cx="600" cy="13" r="1.6" fill="#00E5FF">
+    <animate attributeName="opacity" values="1;0.2;1" dur="1.6s" repeatCount="indefinite"/>
+  </circle>
+</svg>

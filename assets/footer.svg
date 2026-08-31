@@ -1,0 +1,63 @@
+<svg width="1200" height="130" viewBox="0 0 1200 130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Footer - Juan Martin Crespo">
+  <defs>
+    <radialGradient id="f-neb-violet" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7C4DFF" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#7C4DFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="f-neb-cyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#00E5FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="f-hairline" gradientUnits="userSpaceOnUse" x1="120" y1="14" x2="1080" y2="14">
+      <stop offset="0%" stop-color="#7C4DFF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00E5FF" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#7C4DFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="f-glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="2.4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="f-soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="130" fill="#0B0E2A"/>
+
+  <ellipse cx="140" cy="130" rx="260" ry="90" fill="url(#f-neb-violet)" filter="url(#f-soft)">
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="10s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="1060" cy="130" rx="280" ry="95" fill="url(#f-neb-cyan)" filter="url(#f-soft)">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="12s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <line x1="120" y1="14" x2="1080" y2="14" stroke="url(#f-hairline)" stroke-width="1.5"/>
+  <rect x="595" y="8" width="12" height="12" transform="rotate(45 601 14)" fill="#00E5FF" filter="url(#f-glow)">
+    <animate attributeName="opacity" values="0.9;0.3;0.9" dur="2.4s" repeatCount="indefinite"/>
+  </rect>
+
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 12; 0 -26; 0 12" dur="11s" repeatCount="indefinite"/>
+    <circle cx="180" cy="70" r="1.6" fill="#00E5FF" opacity="0.7" filter="url(#f-glow)"/>
+    <circle cx="330" cy="95" r="1.2" fill="#7C4DFF" opacity="0.6"/>
+    <circle cx="905" cy="60" r="1.8" fill="#FFFFFF" opacity="0.55" filter="url(#f-glow)"/>
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 -8; 0 22; 0 -8" dur="13s" repeatCount="indefinite"/>
+    <circle cx="520" cy="105" r="1.4" fill="#FF2D78" opacity="0.5"/>
+    <circle cx="760" cy="88" r="1.5" fill="#00E5FF" opacity="0.65" filter="url(#f-glow)"/>
+    <circle cx="1045" cy="100" r="1.2" fill="#7C4DFF" opacity="0.6"/>
+  </g>
+
+  <text x="600" y="72" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="13" letter-spacing="5" fill="#A0ABC0" opacity="0.85">© 2026 JUAN MARTIN CRESPO <tspan fill="#7C4DFF">//</tspan> SECURE AI ARCHITECT</text>
+
+  <g transform="translate(600,100)">
+    <circle cx="-98" cy="0" r="4" fill="#22C55E">
+      <animate attributeName="opacity" values="1;0.2;1" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <text x="14" y="4" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="11" letter-spacing="3" fill="#22C55E" opacity="0.9">SYSTEM STATUS: ONLINE</text>
+  </g>
+</svg>

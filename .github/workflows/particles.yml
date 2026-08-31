@@ -1,0 +1,38 @@
+name: Regenerate particle constellation
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/generate-particles.js
+      - assets/header.template.svg
+
+permissions:
+  contents: write
+
+jobs:
+  particles:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Regenerate header particles
+        run: node scripts/generate-particles.js
+
+      - name: Commit new constellation
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/header.svg
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: regenerate particle constellation"
+            git push
+          fi
