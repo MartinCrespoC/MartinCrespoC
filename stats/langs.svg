@@ -13,19 +13,19 @@
   <rect width="1200" height="158" rx="12" fill="#0B0E2A"/>
   <text x="24" y="30" font-family="Consolas, 'Courier New', monospace" font-size="11" letter-spacing="4" fill="#00E5FF">LANGUAGE GRID</text>
   <text x="1176" y="30" text-anchor="end" font-family="Consolas, 'Courier New', monospace" font-size="10" letter-spacing="2" fill="#5A6B8C">BYTES ACROSS PUBLIC REPOS</text>
-  <rect x="24.0" y="46" width="565.6" height="22" rx="5" fill="#f34b7d" opacity="0.9">
+  <rect x="24.0" y="46" width="565.5" height="22" rx="5" fill="#f34b7d" opacity="0.9">
     <animate attributeName="opacity" values="0.9;0.65;0.9" dur="2.6s" repeatCount="indefinite"/>
   </rect>
-  <rect x="589.6" y="46" width="166.3" height="22" rx="0" fill="#3178c6" opacity="0.9">
+  <rect x="589.5" y="46" width="166.3" height="22" rx="0" fill="#3178c6" opacity="0.9">
     <animate attributeName="opacity" values="0.9;0.65;0.9" dur="3.1s" repeatCount="indefinite"/>
   </rect>
-  <rect x="755.9" y="46" width="141.4" height="22" rx="0" fill="#00ADD8" opacity="0.9">
+  <rect x="755.8" y="46" width="141.4" height="22" rx="0" fill="#00ADD8" opacity="0.9">
     <animate attributeName="opacity" values="0.9;0.65;0.9" dur="3.6s" repeatCount="indefinite"/>
   </rect>
-  <rect x="897.3" y="46" width="117.4" height="22" rx="0" fill="#A0ABC0" opacity="0.9">
+  <rect x="897.2" y="46" width="117.3" height="22" rx="0" fill="#A0ABC0" opacity="0.9">
     <animate attributeName="opacity" values="0.9;0.65;0.9" dur="4.1s" repeatCount="indefinite"/>
   </rect>
-  <rect x="1014.7" y="46" width="103.9" height="22" rx="0" fill="#3572A5" opacity="0.9">
+  <rect x="1014.6" y="46" width="104.0" height="22" rx="0" fill="#3572A5" opacity="0.9">
     <animate attributeName="opacity" values="0.9;0.65;0.9" dur="4.6s" repeatCount="indefinite"/>
   </rect>
   <rect x="1118.6" y="46" width="57.4" height="22" rx="5" fill="#7C4DFF" opacity="0.9">
