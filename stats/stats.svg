@@ -108,7 +108,7 @@
     </g>
     <rect x="1006.5" y="42.5" width="11" height="11" rx="2" stroke="#FF2D78" stroke-width="1.6" fill="none"/><line x1="1009.5" y1="42.5" x2="1009.5" y2="49" stroke="#FF2D78" stroke-width="1.6" fill="none"/>
     <text x="1159" y="52" text-anchor="end" font-family="Consolas, 'Courier New', monospace" font-size="9.5" letter-spacing="1.6" fill="#5A6B8C">PUBLIC REPOS</text>
-    <text x="1006" y="100" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="34" fill="#FFFFFF" filter="url(#num-glow)">9</text>
+    <text x="1006" y="100" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-weight="800" font-size="34" fill="#FFFFFF" filter="url(#num-glow)">10</text>
     <circle cx="1157" cy="112" r="2.4" fill="#FF2D78">
       <animate attributeName="opacity" values="1;0.2;1" dur="2.85s" repeatCount="indefinite"/>
     </circle>
