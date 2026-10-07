@@ -45,7 +45,7 @@
     <circle cx="431" cy="164" r="5" fill="#f34b7d" filter="url(#glow)"/>
     <text x="444" y="168" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" fill="#151A3C">C++</text>
     <path d="M 600 158 L 601.8 162.2 L 606 162.8 L 602.7 165.9 L 603.6 170 L 600 167.4 L 596.4 170 L 597.3 165.9 L 594 162.8 L 598.2 162.2 Z" fill="#6D3FE8" opacity="0.9"/>
-    <text x="612" y="168" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#4A5578">11</text>
+    <text x="612" y="168" font-family="Consolas, 'Courier New', monospace" font-size="12" fill="#4A5578">12</text>
     <circle cx="660" cy="161" r="2.2" stroke="#6D3FE8" stroke-width="1.4" fill="none"/>
     <circle cx="660" cy="169" r="2.2" stroke="#6D3FE8" stroke-width="1.4" fill="none"/>
     <line x1="660" y1="163.2" x2="660" y2="166.8" stroke="#6D3FE8" stroke-width="1.4"/>
